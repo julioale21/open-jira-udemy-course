@@ -1,8 +1,9 @@
+import { Typography } from "@mui/material";
 
 
 export function HomePage() {
   return (
-    <h1>Hola Mundo</h1>
+    <Typography variant="h1" color="secondary">Hola Mundo</Typography>
   )
 }
 
