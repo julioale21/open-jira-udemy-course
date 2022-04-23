@@ -1,24 +1,24 @@
-import React, { useReducer } from 'react';
-import { UIContext, uiReducer } from './';
+import React, { useReducer } from "react";
+import { UIContext, uiReducer } from "./";
 
 export interface UIState {
-     sideMenuOpen: boolean,
+  sideMenuOpen: boolean;
 }
 
 const UI_INITIAL_STATE: UIState = {
-     sideMenuOpen: false,
-}
-
+  sideMenuOpen: false,
+};
 
 export const UIProvided: React.FC = ({ children }) => {
+  const [state, dispatch] = useReducer(uiReducer, UI_INITIAL_STATE);
 
-const [state, dispatch] = useReducer(uiReducer, UI_INITIAL_STATE);
-
- return (
-   <UIContext.Provider value={{
-       sideMenuOpen:false
-   }}>
-       {children}
-   </UIContext.Provider>
- )
-}
+  return (
+    <UIContext.Provider
+      value={{
+        sideMenuOpen: false,
+      }}
+    >
+      {children}
+    </UIContext.Provider>
+  );
+};
