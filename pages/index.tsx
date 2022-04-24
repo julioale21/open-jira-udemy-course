@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { Card, CardContent, CardHeader, Grid } from "@mui/material";
 import { Layout } from "../components/layouts";
 
 export function HomePage() {
