@@ -7,7 +7,14 @@ export interface EntriesState {
 }
 
 const Entries_INITIAL_STATE: EntriesState = {
-  entries: [],
+  entries: [
+    {
+      _id: "",
+      description: "",
+      createdAt: 412341234,
+      status: "pending",
+    },
+  ],
 };
 
 export const EntriesProvided: React.FC = ({ children }) => {
