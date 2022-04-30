@@ -2,6 +2,8 @@ import React, { useReducer } from "react";
 import { Entry } from "../../interfaces";
 import { EntriesContext, entriesReducer } from "./";
 
+import { v4 as uuidv4 } from "uuid";
+
 export interface EntriesState {
   entries: Entry[];
 }
@@ -9,10 +11,22 @@ export interface EntriesState {
 const Entries_INITIAL_STATE: EntriesState = {
   entries: [
     {
-      _id: "",
-      description: "",
-      createdAt: 412341234,
+      _id: uuidv4(),
+      description: "lorem Exercitation eu irure non aute qui ut.",
       status: "pending",
+      createdAt: Date.now(),
+    },
+    {
+      _id: uuidv4(),
+      description: "Est commodo proident labore ea consectetur sint duis proident.",
+      status: "in-progress",
+      createdAt: Date.now() - 1000000,
+    },
+    {
+      _id: uuidv4(),
+      description: "Laboris excepteur laborum reprehenderit magna cupidatat labore dolor.",
+      status: "finished",
+      createdAt: Date.now() - 100000,
     },
   ],
 };

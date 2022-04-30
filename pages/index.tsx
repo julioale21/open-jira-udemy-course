@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, Grid } from "@mui/material";
 import { Layout } from "../components/layouts";
+import { EntryList } from "../components/ui";
 
 export function HomePage() {
   return (
@@ -10,7 +11,8 @@ export function HomePage() {
           <Card sx={{ height: "calc(100vh - 100px)" }}>
             <CardHeader title="To Do" />
             <CardContent>{/* add new task */}</CardContent>
-            <CardContent>{/* listing tasks */}</CardContent>
+
+            <EntryList />
           </Card>
         </Grid>
         <Grid item sm={4} xs={12}>
