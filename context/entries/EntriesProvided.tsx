@@ -18,6 +18,12 @@ const Entries_INITIAL_STATE: EntriesState = {
     },
     {
       _id: uuidv4(),
+      description: "Pending: Nulla eu dolor eu elit commodo nisi.",
+      status: "pending",
+      createdAt: Date.now(),
+    },
+    {
+      _id: uuidv4(),
       description: "In Progress: Est commodo proident labore ea consectetur sint duis proident.",
       status: "in-progress",
       createdAt: Date.now() - 1000000,
@@ -46,7 +52,13 @@ export const EntriesProvided: React.FC = ({ children }) => {
     dispatch({ type: "[Entry] Add-Entry", payload: newEntry });
   };
 
+  const updateEntry = (entry: Entry) => {
+    dispatch({ type: "[Entry] Entry-Updated", payload: entry });
+  };
+
   return (
-    <EntriesContext.Provider value={{ ...state, addNewEntry }}>{children}</EntriesContext.Provider>
+    <EntriesContext.Provider value={{ ...state, addNewEntry, updateEntry }}>
+      {children}
+    </EntriesContext.Provider>
   );
 };
