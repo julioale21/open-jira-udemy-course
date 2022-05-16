@@ -17,3 +17,8 @@
 
 Renombrar el archivo __.env.example__ to __.env__
 
+## Fill database with test data
+
+```
+    http://localhost:3000/api/seed
+```
