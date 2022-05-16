@@ -7,9 +7,13 @@
 
 ```
 
-
 * MongoDB Local URL:
 
 ```
     mongodb://localhost:27017/entriesdb
 ```
+
+## Configure env variables
+
+Renombrar el archivo __.env.example__ to __.env__
+
